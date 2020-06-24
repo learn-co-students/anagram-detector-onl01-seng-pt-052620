@@ -10,14 +10,14 @@ class Anagram
 
     def match(words)
         @words = words
-        new_words = []
+        anagrams = []
+        @word = word.split("").sort.join("")
         words.each do |word|
-            new_word = word.split('').sort.join('')
-            new_words << new_word
+            new_word = word.split('').sort.join("")
+            if new_word == @word
+                anagrams << word
+            end
         end
-            @word
-        end
-
-        binding.pry
+        anagrams
     end
 end
